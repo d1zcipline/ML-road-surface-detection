@@ -16,6 +16,10 @@ aiohttp-retry==2.9.1
     #   scmrepo
 aiosignal==1.4.0
     # via aiohttp
+albucore==0.0.24
+    # via albumentations
+albumentations==2.0.8
+    # via -r requirements.in
 amqp==5.3.1
     # via kombu
 annotated-types==0.7.0
@@ -56,6 +60,8 @@ attrs==25.4.0
     #   jsonschema
     #   referencing
     #   sqltrie
+audiomentations==0.43.1
+    # via -r requirements.in
 audioread==3.1.0
     # via librosa
 babel==2.17.0
@@ -82,6 +88,8 @@ cffi==2.0.0
     # via
     #   argon2-cffi-bindings
     #   cryptography
+    #   numpy-minmax
+    #   numpy-rms
     #   pygit2
     #   soundfile
 charset-normalizer==3.4.4
@@ -329,7 +337,9 @@ lark==1.3.1
 lazy-loader==0.4
     # via librosa
 librosa==0.11.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   audiomentations
 llvmlite==0.45.1
     # via numba
 markdown-it-py==4.0.0
@@ -380,22 +390,37 @@ numba==0.62.1
 numpy==1.26.4
     # via
     #   -r requirements.in
+    #   albucore
+    #   albumentations
+    #   audiomentations
     #   contourpy
     #   librosa
     #   matplotlib
     #   numba
+    #   numpy-minmax
+    #   numpy-rms
+    #   opencv-python-headless
     #   pandas
     #   scikit-learn
     #   scipy
     #   seaborn
     #   soundfile
     #   soxr
+numpy-minmax==0.3.1
+    # via audiomentations
+numpy-rms==0.4.2
+    # via audiomentations
 oauth2client==4.1.3
     # via pydrive2
 omegaconf==2.3.0
     # via
     #   dvc
     #   hydra-core
+opencv-python-headless==4.11.0.86
+    # via
+    #   -r requirements.in
+    #   albucore
+    #   albumentations
 orjson==3.11.4
     # via
     #   dvc-data
@@ -479,6 +504,7 @@ pycparser==2.23
     # via cffi
 pydantic==2.12.5
     # via
+    #   albumentations
     #   gto
     #   pydantic-settings
     #   wandb
@@ -523,6 +549,8 @@ python-dotenv==1.2.1
     # via pydantic-settings
 python-json-logger==4.0.0
     # via jupyter-events
+python-stretch==0.3.1
+    # via audiomentations
 pytz==2025.2
     # via pandas
 pywin32==311
@@ -534,6 +562,7 @@ pywinpty==3.0.2
     #   terminado
 pyyaml==6.0.3
     # via
+    #   albumentations
     #   jupyter-events
     #   omegaconf
     #   pydrive2
@@ -594,6 +623,8 @@ scikit-learn==1.7.2
     #   librosa
 scipy==1.15.3
     # via
+    #   albumentations
+    #   audiomentations
     #   librosa
     #   scikit-learn
 scmrepo==3.5.9
@@ -616,6 +647,8 @@ shortuuid==1.0.13
     #   dvc-task
 shtab==1.8.0
     # via dvc
+simsimd==6.5.3
+    # via albucore
 six==1.17.0
     # via
     #   flatten-dict
@@ -625,15 +658,21 @@ six==1.17.0
 smmap==5.0.2
     # via gitdb
 soundfile==0.13.1
-    # via librosa
+    # via
+    #   -r requirements.in
+    #   librosa
 soupsieve==2.8
     # via beautifulsoup4
-soxr==1.0.0
-    # via librosa
+soxr==0.5.0.post1
+    # via
+    #   audiomentations
+    #   librosa
 sqltrie==0.11.2
     # via dvc-data
 stack-data==0.6.3
     # via ipython
+stringzilla==4.4.0
+    # via albucore
 tabulate==0.9.0
     # via
     #   dvc
